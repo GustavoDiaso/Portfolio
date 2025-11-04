@@ -16,28 +16,37 @@
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     width: max-content;
     padding: 0px;
     margin: 0px;
-    transform: translate(140px, -50%);
+    transform: translate(90px, -50%);
+    z-index: 1;
 }
 
 .nav_link {
-    color: rgb(245, 245, 245);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: none;
+    display: inline-block;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    transition: background-color 1s ease-in;
 }
-
-.nav_link_active {
-    color: rgb(204, 0, 255);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.nav_link a{
+    color: rgb(245, 245, 245);
     text-decoration: none;
 }
 
 .logo_img {
     position: absolute;
-    height: 50px;
-    transform: translate(-540px, -50%);
+    height: 60px;
+    padding: 8px 15px 8px 15px;
+    transform: translate(-560px, -50%);
+}
 
+.slide {
+    position: absolute;
+    background-color: #5e00aa;
+    /* width: 50px;
+    height: 30px; */
+    transform: translateY(-50%);
+    z-index: 0;
 }
