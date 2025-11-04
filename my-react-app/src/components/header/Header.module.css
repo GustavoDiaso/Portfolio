@@ -10,7 +10,8 @@
     align-items: center;
     justify-content: center;
 }
-.menu_options{
+
+.menu_options {
     list-style: none;
     position: absolute;
     display: flex;
@@ -21,12 +22,20 @@
     margin: 0px;
     transform: translate(140px, -50%);
 }
-.menu_options a{
+
+.nav_link {
     color: rgb(245, 245, 245);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
 }
-.logo_img{
+
+.nav_link_active {
+    color: rgb(204, 0, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.logo_img {
     position: absolute;
     height: 50px;
     transform: translate(-540px, -50%);

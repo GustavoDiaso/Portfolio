@@ -3,43 +3,42 @@ import logoIMGPath from "../../assets/images/logo.png"
 import { useState } from "react";
 
 const navBarLinks = [
-    {text: "Home", href: "#"},
-    {text: "About me", href: "#"},
-    {text: "Portfolio", href: "#"},
-    {text: "Skills", href: "#"},
-    {text: "Contact", href: "#"},
+    { text: "Home", href: "#" },
+    { text: "About me", href: "#" },
+    { text: "Portfolio", href: "#" },
+    { text: "Skills", href: "#" },
+    { text: "Contact", href: "#" },
 ]
 
-function Header(){
+function Header() {
     let [activeLink, setActiveLink] = useState('Home')
-    
-    function toggleLinkColor(linkClass){
-        
-    }
 
-    return(
+    return (
         <header className={css.header}>
             <nav>
                 <ul className={css.menu_options}>
                     {
-                        navBarLinks.map((link)=>{
-                            <li>
-                                <a 
-                                    href={link.href} 
-                                    className={link.text == activeLink ? css.nav_link_active : css.nav_link} 
-                                    onClick={()=>{toggleLinkColor(link)}}
-                                >
-                                    {link.text}
-                                </a>
-                            </li>
+                        navBarLinks.map((link) => {
+                            return (
+                                <li key={link.text}>
+                                    <a
+                                        href={link.href}
+                                        className={link.text == activeLink ? css.nav_link_active : css.nav_link}
+                                        onClick={() => { setActiveLink(link.text) }}
+                                    >
+                                        {link.text}
+                                    </a>
+                                </li>
+                            )
                         })
+
                     }
 
-                    
+
                 </ul>
             </nav>
             <a href="#">
-                <img src={logoIMGPath} alt="" className={css.logo_img}/>
+                <img src={logoIMGPath} alt="" className={css.logo_img} />
             </a>
         </header>
     )
