@@ -21,14 +21,17 @@ function Header() {
             //verifying rather the ulRef and slideRef variables are referencing the <ul> and <div> DOM elements respectively 
             if (!ulRef.current || !slideRef.current){return}
             
-            const slide = ulRef.current;
+            const slide = slideRef.current;
             const activeLinkElement = ulRef.current.querySelector('[data-status="active"]');
             
-            // defining the size of the slide element based on the active link he's behind 
-            slide.style.width = activeLinkElement.offsetWidth + 20;
-            slide.style.height = activeLinkElement.offsetHeight + 10;
+            // defining the size of the slide element based on the active link he's behind (active link)
+            slide.style.width = `${activeLinkElement.offsetWidth}px`
+            slide.style.height = `${activeLinkElement.offsetHeight}px`;
 
-            console.dir(activeLinkElement)
+            // positioning the slide element behing the active link 
+            slide.style.transform = `translateX(${activeLinkElement.offsetLeft}px)`;
+            console.dir(slide)
+
         },
         [activeLinkText]
     );
@@ -36,9 +39,8 @@ function Header() {
     return (
         <header className={css.header}>
             <nav>
-                <div className={css.slide} ref={slideRef}></div>
-
                 <ul className={css.menu_options} ref={ulRef}>
+                    <div className={css.slide} ref={slideRef}></div>
                     {
                         navBarLinks.map((link) => {
                             return (
@@ -59,8 +61,15 @@ function Header() {
                     }
                 </ul>
             </nav>
-            <a href="#">
-                <img src={logoIMGPath} alt="" className={css.logo_img} />
+            <a href={navBarLinks[0].href}>
+                <img 
+                    src={logoIMGPath}  
+                    alt="logo image" 
+                    className={css.logo_img} onClick={
+                        ()=>{
+                            setActiveLinkText('Home')
+                        }
+                    }/>
             </a>
         </header>
     )
