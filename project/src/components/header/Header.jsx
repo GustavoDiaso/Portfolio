@@ -30,7 +30,6 @@ function Header() {
 
             // positioning the slide element behing the active link 
             slide.style.transform = `translateX(${activeLinkElement.offsetLeft}px)`;
-            console.dir(slide)
 
         },
         [activeLinkText]

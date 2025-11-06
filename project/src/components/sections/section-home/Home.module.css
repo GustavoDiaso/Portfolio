@@ -1,13 +1,13 @@
 .section_home {
-    position: absolute;
     width: 1100px;
     height: fit-content;
-    background-color: rgba(118, 245, 0, 0.027);
+    /* background-color: #3e29b311; */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 80px;
-    padding-top: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .dev_info{
@@ -51,14 +51,36 @@
 
 }
 
-.social_media_image{
+.social_media_image {
     height: 40px;
 }
 
-.download_cv{
+.download_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_download_cv {
     padding: 12px;
+    font-weight: 500;
     background-color: #5e00aaaf;
     border-radius: 30px;
     text-decoration: none;
     color: rgb(234, 0, 255);
+    transition: transform 0.1s;
+}
+.btn_download_cv:hover {
+    transform: scale(1.04);
+}
+
+.junimo_dancing {
+    width: 80px;
+    transition: transform 0.1s ease-out;
+}
+.junimo_jumping {
+    width: 80px;
+    transition: transform 0.09s ease-out;
+    transform: translateY(-20px);
 }
