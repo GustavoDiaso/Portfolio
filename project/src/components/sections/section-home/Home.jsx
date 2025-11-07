@@ -1,5 +1,5 @@
 import css from "./Home.module.css"
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import devIMGPath from '../../../assets/images/manager.png'
 import linkedinIMGPath from '../../../assets/images/linkedin.png'
 import whatsappIMGPath from '../../../assets/images/whatsapp.png'
@@ -14,9 +14,10 @@ const socialMedias = [
 ];
 
 function Home(){
-    const junimoGIFRef = useRef(null);
-    const [isJunimoJumping, setJunimoJumpingState] = useState(false)
 
+    const junimoGIFRef = useRef(null);
+    const [isJunimoJumping, setJunimoJumpingState] = useState(false);
+    
     function handleJunimoClick(){
         // just check if the reference to the junimo gif exists first
         if (!junimoGIFRef.current){return}
@@ -33,12 +34,60 @@ function Home(){
         
     }
 
+
+    const [iIndex, setIIndex] = useState(0);
+    const [jIndex, setJIndex] = useState(0);
+    const [displayedFirstName, setDisplayedFirstName] = useState('');
+    const [displayedLastName, setDisplayedLastName] = useState('');
+
+    useEffect(
+        () => {
+            const firstName = "Gustavo Henrique";
+            const lastName = "de Oliveira Dias";
+
+            const intervalCode = setInterval(()=>{
+                setIIndex((currIIndex) => {
+                    if (currIIndex < firstName.length) {
+                
+                        setDisplayedFirstName((currDisplayedFirstName) => {
+                            return currDisplayedFirstName + firstName.charAt(currIIndex);
+                        });
+                        
+                        return currIIndex + 1; 
+
+                    } 
+                    
+                    setJIndex((currJIndex)=>{
+                        if (currJIndex < lastName.length){
+
+                            setDisplayedLastName((currDisplayedLastName)=>{
+                                return currDisplayedLastName + lastName.charAt(currJIndex) 
+                            });
+
+                            return currJIndex + 1;
+                        }
+            
+                        clearInterval(intervalCode)
+
+                    });
+                });
+                    console.log('oi')
+                }, 
+                120
+            );
+
+        }
+        , []
+    )
+
     return(
         <section className={css.section_home}>
             <div className={css.dev_info}>
                 <h3 className={css.greeting}>Greetings! 🖖</h3>
-                <h1 className={css.name}>Gustavo Henrique <br></br> de Oliveira Dias</h1>
-                <h2 className={css.presentation}>Software Developer - Python & JS</h2>
+                <h1 className={css.presentation}> Hi, my name is</h1>
+                <h1 className={css.name}>{displayedFirstName}</h1>
+                <h1 className={css.name}>{displayedLastName}</h1>
+                <h2 className={css.profession}>Software Developer - Python & JS</h2>
 
                 <ul className={css.social_media_menu}>
                     {

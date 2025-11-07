@@ -14,26 +14,34 @@
     width: fit-content;
 }
 
+.presentation {
+    color: rgb(245,245,245);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
 .name {
-    color: rgb(245, 245, 245);
+    color: rgb(242, 98, 255);
     font-size: 35px;
     margin: 0px;
 }
 
-.presentation {
+.profession {
     color: rgb(245, 245, 245);
     font-weight: 300;
     font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .greeting {
-    color: rgb(234, 0, 255);
+    color: rgb(242, 98, 255);
     width: fit-content;
     font-weight: 500;
     font-size: 16px;
     padding: 10px;
     background-color: #5e00aaaf;
     border-radius: 20px;
+    margin: 0px;
 
 }
 
@@ -68,7 +76,7 @@
     background-color: #5e00aaaf;
     border-radius: 30px;
     text-decoration: none;
-    color: rgb(234, 0, 255);
+    color: rgb(242, 98, 255);
     transition: transform 0.1s;
 }
 .btn_download_cv:hover {
