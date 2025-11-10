@@ -73,7 +73,7 @@ function Home() {
 
                         }
                     )
-                }, 130 // time range between letter insertions
+                }, 100 // time range between letter insertions
             );
         }, []
     )

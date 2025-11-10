@@ -5,8 +5,8 @@ import { useState, useEffect, useRef } from "react";
 const navBarLinks = [
     { text: "Home", href: "#" },
     { text: "About me", href: "#" },
-    { text: "Portfolio", href: "#" },
     { text: "Skills", href: "#" },
+    { text: "Portfolio", href: "#" },
     { text: "Contact", href: "#" },
 ]
 
@@ -24,7 +24,7 @@ function Header() {
             const slide = slideRef.current;
             const activeLinkElement = ulRef.current.querySelector('[data-status="active"]');
             
-            // defining the size of the slide element based on the active link he's behind (active link)
+            // defining the size of the slide element based on the active link he's behind
             slide.style.width = `${activeLinkElement.offsetWidth}px`
             slide.style.height = `${activeLinkElement.offsetHeight}px`;
 
@@ -45,7 +45,7 @@ function Header() {
                             return (
                                 <li 
                                     key={link.text} 
-                                    className={css.nav_link} 
+                                    className={link.text == activeLinkText ? css.nav_link_active : css.nav_link} 
                                     data-status={link.text == activeLinkText ? 'active' : ''}
                                 >
                                     <a
