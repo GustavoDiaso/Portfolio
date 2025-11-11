@@ -1,0 +1,11 @@
+.section_skills {
+    max-width: 1100px;
+    height: fit-content;
+    /* background-color: #3e29b311; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
