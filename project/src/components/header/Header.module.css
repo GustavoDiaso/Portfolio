@@ -50,6 +50,7 @@
 
 .nav_link a {
     color: rgb(230, 230, 230);
+    cursor: pointer;
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
@@ -64,6 +65,7 @@
 }
 
 .nav_link_active a {
+    cursor: pointer;
     color: rgb(242, 98, 255);
     font-size: 18px;
     font-weight: 400;

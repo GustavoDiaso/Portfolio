@@ -1,13 +1,13 @@
-import css from "./Sections.module.css"
-import Home from './section-home/Home'
-import AboutMe from "./section-about-me/AboutMe"
-import Skills from "./section-skills/Skills"
+import css from "./Sections.module.css";
+import Home from './section-home/Home';
+import AboutMe from "./section-about-me/AboutMe";
+import Skills from "./section-skills/Skills";
 
-function Sections(){
+const Sections = ({sectionRefs}) => {
     return(
         <section className={css.sections}>
-            <Home/>
-            <AboutMe/>
+            <Home ref={sectionRefs.home}/>
+            <AboutMe ref={sectionRefs.aboutMe}/>
             <Skills/>
         </section>
     )

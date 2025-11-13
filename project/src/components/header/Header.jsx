@@ -1,19 +1,23 @@
 import css from "./Header.module.css";
-import logoIMGPath from "../../assets/images/logo.png"
+import logoIMGPath from "../../assets/images/logo.png";
 import { useState, useEffect, useRef } from "react";
 
-const navBarLinks = [
-    { text: "Home", href: "#" },
-    { text: "About me", href: "#" },
-    { text: "Skills", href: "#" },
-    { text: "Portfolio", href: "#" },
-    { text: "Contact", href: "#" },
-]
 
-function Header() {
+const Header = (
+    {scrollToSection}
+)=>{
     const [activeLinkText, setActiveLinkText] = useState('Home');
     const ulRef = useRef(null); // Reference to the <ul></ul> element that contains the navbar links  
     const slideRef = useRef(null); // Reference to the <div></div> element that represents the slide 
+    
+    const navBarLinks = [
+        { text: "Home", sectionToScroll: 'home'},
+        { text: "About me", sectionToScroll: 'aboutMe'},
+        { text: "Skills", sectionToScroll: 'skills'},
+        { text: "Experience", sectionToScroll: 'experience'},
+        { text: "Portfolio", sectionToScroll: 'portfolio'},
+        { text: "Contact", sectionToScroll: 'contact'},
+    ];
 
     // this function will be called every time the component is mounted or whenever activeLink suffers any changes
     useEffect(
@@ -35,6 +39,8 @@ function Header() {
         },
         [activeLinkText]
     );
+
+
 
     return (
         <header className={css.header}>
@@ -62,9 +68,13 @@ function Header() {
                                         className={link.text == activeLinkText ? css.nav_link_active : css.nav_link} 
                                         data-status={link.text == activeLinkText ? 'active' : ''}
                                     >
-                                        <a
-                                            href={link.href}
-                                            onClick={() => { setActiveLinkText(link.text) }}
+                                        <a  
+                                            onClick={
+                                                () => { 
+                                                    setActiveLinkText(link.text);
+                                                    scrollToSection(link.sectionToScroll);
+                                                }
+                                            }
                                         >
                                             {link.text}
                                         </a>
