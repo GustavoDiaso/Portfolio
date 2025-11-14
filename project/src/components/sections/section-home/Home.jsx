@@ -3,6 +3,8 @@ import { useRef, useState, useEffect, forwardRef } from "react";
 import devIMGPath from '../../../assets/images/manager.png';
 import linkedinIMGPath from '../../../assets/images/linkedin.png';
 import whatsappIMGPath from '../../../assets/images/whatsapp.png';
+import githubIMGPath from '../../../assets/images/github.png';
+import curriculumPath from '../../../assets/curriculum/EnglishCV.pdf';
 import junimoDancingGIF from '../../../assets/images/junimo-dancing.gif';
 
 const socialMedias = [
