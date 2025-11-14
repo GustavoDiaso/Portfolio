@@ -1,11 +1,9 @@
-import css from "./Home.module.css"
-import { useRef, useState, useEffect, forwardRef } from "react"
-import devIMGPath from '../../../assets/images/manager.png'
-import linkedinIMGPath from '../../../assets/images/linkedin.png'
-import whatsappIMGPath from '../../../assets/images/whatsapp.png'
-import githubIMGPath from '../../../assets/images/github.png'
-import curriculumPath from '../../../assets/curriculum/EnglishCV.pdf'
-import junimoDancingGIF from '../../../assets/images/junimo-dancing.gif'
+import css from "./Home.module.css";
+import { useRef, useState, useEffect, forwardRef } from "react";
+import devIMGPath from '../../../assets/images/manager.png';
+import linkedinIMGPath from '../../../assets/images/linkedin.png';
+import whatsappIMGPath from '../../../assets/images/whatsapp.png';
+import junimoDancingGIF from '../../../assets/images/junimo-dancing.gif';
 
 const socialMedias = [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/gustavodiaso', imgPath: linkedinIMGPath },
@@ -15,7 +13,7 @@ const socialMedias = [
 
 const Home = forwardRef(
     (
-        props, 
+        props,
         ref
     ) => {
         const junimoGIFRef = useRef(null);
@@ -28,7 +26,7 @@ const Home = forwardRef(
             // If the junimo is already jumping, the animation will not be executed again
             if (isJunimoJumping) { return }
 
-            setJunimoJumpingState(true)
+            setJunimoJumpingState(true);
 
             // A timeout that will set the jumping state to false again, returning the junimo to the original position
             setTimeout(() => {
@@ -96,7 +94,11 @@ const Home = forwardRef(
                                 return (
                                     <li key={social_media.name}>
                                         <a href={social_media.href} target="_blank">
-                                            <img src={social_media.imgPath} alt={social_media.name} className={css.social_media_image} />
+                                            <img
+                                                src={social_media.imgPath}
+                                                alt={social_media.name}
+                                                className={css.social_media_image}
+                                            />
                                         </a>
                                     </li>
                                 )
@@ -127,7 +129,6 @@ const Home = forwardRef(
             </section>
         )
     }
-
 );
 
 export default Home

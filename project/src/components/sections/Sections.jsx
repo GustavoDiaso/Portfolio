@@ -3,12 +3,12 @@ import Home from './section-home/Home';
 import AboutMe from "./section-about-me/AboutMe";
 import Skills from "./section-skills/Skills";
 
-const Sections = ({sectionRefs}) => {
-    return(
+const Sections = ({ sectionReferences }) => {
+    return (
         <section className={css.sections}>
-            <Home ref={sectionRefs.home}/>
-            <AboutMe ref={sectionRefs.aboutMe}/>
-            <Skills/>
+            <Home ref={sectionReferences.home} />
+            <AboutMe ref={sectionReferences.aboutMe} />
+            <Skills />
         </section>
     )
 }
