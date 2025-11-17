@@ -11,12 +11,13 @@ const Header = (
     const slideRef = useRef(null); // Reference to the <div></div> element that represents the slide 
     
     const navBarLinks = [
-        { text: "Home", sectionToScroll: 'home'},
-        { text: "About me", sectionToScroll: 'aboutMe'},
-        { text: "Skills", sectionToScroll: 'skills'},
-        { text: "Experience", sectionToScroll: 'experience'},
-        { text: "Portfolio", sectionToScroll: 'portfolio'},
-        { text: "Contact", sectionToScroll: 'contact'},
+        { text: "Home", sectionOfReference: 'home'},
+        { text: "About me", sectionOfReference: 'aboutMe'},
+        { text: "Skills", sectionOfReference: 'skills'},
+        { text: "Experience", sectionOfReference: 'experience'},
+        { text: "Certifications", sectionOfReference: 'certifications'},
+        { text: "Portfolio", sectionOfReference: 'portfolio'},
+        { text: "Contact", sectionOfReference: 'contact'},
     ];
 
     // this function will be called every time the component is mounted or whenever activeLink suffers any changes
@@ -72,7 +73,7 @@ const Header = (
                                             onClick={
                                                 () => { 
                                                     setActiveLinkText(link.text);
-                                                    scrollToSection(link.sectionToScroll);
+                                                    scrollToSection(link.sectionOfReference);
                                                 }
                                             }
                                         >
