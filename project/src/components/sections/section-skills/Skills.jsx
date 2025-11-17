@@ -7,6 +7,7 @@ import htmlIMGPath from "../../../assets/images/html.png"
 import cssIMGPath from "../../../assets/images/css.png"
 import gitHubIMGPath from "../../../assets/images/github.png"
 import mySqlIMGPath from "../../../assets/images/mysql.png"
+import { forwardRef } from "react"
 
 const skills = [
     {name: 'Python', imgSource: pythonIMGPath},
@@ -19,24 +20,30 @@ const skills = [
     {name: 'MySQL', imgSource: mySqlIMGPath},
 ];
 
-function Skills(){
-    return (
-        <section className={css.section_skills}>
-            <h1 className={css.title}>Skills and Technologies</h1>
-            <ul className={css.skills}>
-                {
-                    skills.map((skill)=>{
-                        return(
-                            <li className={css.skill} key={skill.name}>
-                                <img src={skill.imgSource} alt="" className={css.skill_img}/>
-                                {skill.name}
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        </section>
-    )
-}
+const Skills = forwardRef(
+    (
+        props,
+        ref
+    ) => {
+        return (
+            <section className={css.section_skills} ref={ref}>
+                <h1 className={css.title}>Skills and Technologies</h1>
+                <ul className={css.skills}>
+                    {
+                        skills.map((skill)=>{
+                            return(
+                                <li className={css.skill} key={skill.name}>
+                                    <img src={skill.imgSource} alt="" className={css.skill_img}/>
+                                    {skill.name}
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </section>
+        )
+    }   
+)
+
 
 export default Skills

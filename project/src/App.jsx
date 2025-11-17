@@ -22,11 +22,10 @@ const App = () => {
             of the viewport to the top edge of the element. 
             */
 			const distFromViewportsTop = targetSection.getBoundingClientRect().top;
-			const offset = 100;
+			const offset = 200;
 
-			console.dir(targetSection);
 			window.scrollTo({
-				top: distFromViewportsTop - offset,
+				top: distFromViewportsTop - offset + window.scrollY,
 				behavior: 'smooth',
 			})
 		}
@@ -36,7 +35,7 @@ const App = () => {
 	return (
 		<>
 			<Header scrollToSection={scrollToSection} />
-			<Sections sectionRefs={sectionReferences} />
+			<Sections sectionReferences={sectionReferences} />
 		</>
 	)
 };

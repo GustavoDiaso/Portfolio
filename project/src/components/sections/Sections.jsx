@@ -8,7 +8,7 @@ const Sections = ({ sectionReferences }) => {
         <section className={css.sections}>
             <Home ref={sectionReferences.home} />
             <AboutMe ref={sectionReferences.aboutMe} />
-            <Skills />
+            <Skills ref={sectionReferences.skills}/>
         </section>
     )
 }
