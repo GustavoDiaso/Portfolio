@@ -1,4 +1,6 @@
 .section_about_me {
+    width: 100%;
+    max-width: 1100px;
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +10,7 @@
     padding: 0px 20px 0px 20px;
 }
 
-.about_me{
+.about_me {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,21 +31,21 @@
     font-weight: 350;
     color: rgb(230, 230, 230);
     text-align: center;
-    
+
 }
 
-.dev_img{
+.dev_img {
     height: 300px;
 }
 
-@media screen and (max-width: 1069px){
-    .section_about_me{
+@media screen and (max-width: 1069px) {
+    .section_about_me {
         gap: 50px;
     }
 }
 
-@media screen and (max-width: 735px){
-    .dev_img{
+@media screen and (max-width: 735px) {
+    .dev_img {
         display: none;
     }
 }

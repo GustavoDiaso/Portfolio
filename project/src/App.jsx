@@ -9,6 +9,7 @@ const App = () => {
 		aboutMe: useRef(null),
 		skills: useRef(null),
 		experience: useRef(null),
+		certifications: useRef(null),
 		portfolio: useRef(null),
 		contact: useRef(null),
 	};
@@ -22,7 +23,7 @@ const App = () => {
             of the viewport to the top edge of the element. 
             */
 			const distFromViewportsTop = targetSection.getBoundingClientRect().top;
-			const offset = 200;
+			const offset = 150;
 
 			window.scrollTo({
 				top: distFromViewportsTop - offset + window.scrollY,

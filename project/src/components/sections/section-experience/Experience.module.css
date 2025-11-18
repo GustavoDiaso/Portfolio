@@ -1,0 +1,12 @@
+.section_experience {
+    width: 100%;
+    max-width: 1100px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    padding: 0px 20px 0px 20px;
+    background-color: blue;
+}

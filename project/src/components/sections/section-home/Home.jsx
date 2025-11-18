@@ -32,7 +32,7 @@ const Home = forwardRef(
 
             // A timeout that will set the jumping state to false again, returning the junimo to the original position
             setTimeout(() => {
-                setJunimoJumpingState(false)
+                setJunimoJumpingState(false);
             }, 200)
 
         }
