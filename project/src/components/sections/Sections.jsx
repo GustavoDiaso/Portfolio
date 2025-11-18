@@ -2,7 +2,7 @@ import css from "./Sections.module.css";
 import Home from './section-home/Home';
 import AboutMe from "./section-about-me/AboutMe";
 import Skills from "./section-skills/Skills";
-import Experience from "./section-experience/Experience"
+import Experiences from "./section-experiences/Experiences"
 
 const Sections = ({ sectionReferences }) => {
     return (
@@ -10,7 +10,7 @@ const Sections = ({ sectionReferences }) => {
             <Home ref={sectionReferences.home} />
             <AboutMe ref={sectionReferences.aboutMe} />
             <Skills ref={sectionReferences.skills} />
-            <Experience ref={sectionReferences.experience} />
+            <Experiences ref={sectionReferences.experiences} />
         </section>
     )
 }

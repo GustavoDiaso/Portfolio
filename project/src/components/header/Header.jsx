@@ -14,7 +14,7 @@ const Header = (
         { text: "Home", sectionOfReference: 'home'},
         { text: "About me", sectionOfReference: 'aboutMe'},
         { text: "Skills", sectionOfReference: 'skills'},
-        { text: "Experience", sectionOfReference: 'experience'},
+        { text: "Experiences", sectionOfReference: 'experiences'},
         { text: "Certifications", sectionOfReference: 'certifications'},
         { text: "Portfolio", sectionOfReference: 'portfolio'},
         { text: "Contact", sectionOfReference: 'contact'},

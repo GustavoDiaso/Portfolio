@@ -1,12 +1,18 @@
-.section_experience {
+.section_experiences {
     width: 100%;
     max-width: 1100px;
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: top;
     justify-content: center;
-    gap: 120px;
+    gap: 30px;
     padding: 0px 20px 0px 20px;
+}
+
+.experiences_list {
+    list-style: none;
     background-color: blue;
+    width: 100%;
+    max-width: 300px;
 }

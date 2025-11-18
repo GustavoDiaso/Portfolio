@@ -8,7 +8,7 @@ const App = () => {
 		home: useRef(null),
 		aboutMe: useRef(null),
 		skills: useRef(null),
-		experience: useRef(null),
+		experiences: useRef(null),
 		certifications: useRef(null),
 		portfolio: useRef(null),
 		contact: useRef(null),
