@@ -3,16 +3,16 @@ import { forwardRef } from 'react';
 
 const educational_experiences = [
     {
-        institution: 'ETEC Lauro Gomes - BRAZIL',
-        course: 'Systems analysis and development',
-        period: 'JAN/2020 - DEC/2022',
-        degree: 'Technical',
-    },
-    {
         institution: 'UFABC - Federal Universisty of ABC - BRAZIL',
         course: 'Computer Science',
         period: 'MAY/2023 - DEC/2027',
         degree: "Bachelor's",
+    },
+    {
+        institution: 'ETEC Lauro Gomes - BRAZIL',
+        course: 'Systems analysis and development',
+        period: 'JAN/2020 - DEC/2022',
+        degree: 'Technical',
     },
 ];
 
@@ -54,35 +54,47 @@ const Experiences = forwardRef(
 
         return (
             <section ref={ref} className={css.section_experiences}>
-
-                <ul className={css.experiences_list}>
+                             
+                <div id='educational_experiences' className={css.experiences}>
+                    <h1 className={css.title}>Educational Experiences 🧑‍🎓</h1>
+                    <ul className={css.experiences_list}>
                     {
                         educational_experiences.map((experience)=>{
                             return(
                                 <li key={experience.institution}>
-                                    <h1>{experience.institution}</h1>
-                                    <p>{experience.degree} degree in {experience.course}</p>
-                                    <p>{experience.period}</p>
+                                    <div className={css.ball_indicator}></div>
+                                    <div className={css.experience_information}>
+                                        <h1>{experience.institution}</h1>
+                                        <p>{experience.degree} degree in {experience.course}</p>
+                                        <p>{experience.period}</p>
+                                    </div>
                                 </li>
                             )
                         })
                     }
+                    </ul>
+                </div>
 
-                </ul>
-
-                <ul className={css.experiences_list}>
-                    {
-                        professional_experiences.map((experience)=>{
-                            return(
-                                <li key={experience.company+experience.period}>
-                                    <h1>{experience.company}</h1>
-                                    <p>{experience.area}</p>
-                                    <p>{experience.period}</p>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
+                <div id='professional_experiences' className={css.experiences}>
+                    <h1 className={css.title}>Professional Experiences 👨‍💼</h1>
+                    <ul className={css.experiences_list}>
+                        {
+                            professional_experiences.map((experience)=>{
+                                return(
+                                    <li key={experience.company+experience.period}>
+                                        <div className={css.ball_indicator}></div>
+                                        <div className={css.experience_information}>
+                                            <h1>{experience.company}</h1>
+                                            <p>{experience.area}</p>
+                                            <p>{experience.period}</p>
+                                        </div>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+                
 
             </section>
         )
