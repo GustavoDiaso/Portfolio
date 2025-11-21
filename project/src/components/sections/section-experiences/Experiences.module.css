@@ -37,7 +37,7 @@
 
 .experiences_list li{
     background-color: #470081;
-    padding: 15px;
+    padding: 20px;
     color: rgb(230, 230, 230);
     width: 100%;
     border-radius: 15px;
@@ -63,10 +63,11 @@
 
 .experience_information h1{
     font-size: 20px;
-    margin: 0px;
+    margin: 0px 0px 5px 0px;
 }
 
 .experience_information p{
     font-size: 18px;
     margin: 0px;
+    font-weight: 350;
 }
