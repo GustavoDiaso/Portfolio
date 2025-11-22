@@ -8,64 +8,106 @@ const Certifications = forwardRef(
         ref
     ) => {
 
-        const certificationsList = useRef(null);
+        const certificationsCardsList = useRef(null);
 
-        useEffect(
-            ()=>{
-                if (!certificationsList.current){
-                    return
-                }
+        const handleCertificationCardEnter = (certificationId) => {
+            if (certificationsCardsList.current === null) return;
 
-                const viewCertificationButtons = certificationsList.current.querySelectorAll(`.${css.btn_view_certification}`);
-                // console.dir(viewCertificationButtons)
-                console.dir(viewCertificationButtons)
-            }, 
-            []
-        )
 
-        const handleCertificationHover = (certificationID)=>{
-            const certification = certificationsList.current.querySelector(`[id="${certificationID}"]`);
-            console.dir(certification)
-            
+            const certificationCard = certificationsCardsList.current.querySelector(
+                `[data-certification-id="${certificationId}"]`
+            );
 
-        }
+            const certificationAccessMenu = certificationCard.querySelector(
+                `.${css.certification_access_menu_hidden}`
+            );
+
+            const accessCertificationLink = certificationCard.querySelector(
+                `a`
+            );
+
+            // increasing the intensity of the black shadow in the background of the cards
+            certificationCard.style.backgroundImage = `
+                linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 1)), 
+                url(${certificationCard.dataset.certificationImgPath})
+            `;
+
+            certificationAccessMenu.classList.remove(css.certification_access_menu_hidden);
+            certificationAccessMenu.classList.add(css.certification_access_menu_appearing);
+            accessCertificationLink.classList.remove(css.access_certification_link_hidden);
+            accessCertificationLink.classList.add(css.access_certification_link_appearing);
+
+        };
+
+        const handleCertificationCardLeave = (certificationId) => {
+            if (certificationsCardsList.current === null) return;
+
+            const certificationCard = certificationsCardsList.current.querySelector(
+                `[data-certification-id="${certificationId}"]`
+            );
+
+            const certificationAccessMenu = certificationCard.querySelector(
+                `.${css.certification_access_menu_appearing}`
+            );
+
+            const accessCertificationLink = certificationCard.querySelector(
+                `a`
+            );
+
+            // decreasing the intensity of the black shadow in the background of the cards
+            certificationCard.style.backgroundImage = `
+                linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.96),rgba(0, 0, 0, 1)),
+                url(${certificationCard.dataset.certificationImgPath})
+            `;
+
+            certificationAccessMenu.classList.remove(css.certification_access_menu_appearing);
+            certificationAccessMenu.classList.add(css.certification_access_menu_hidden);
+            accessCertificationLink.classList.remove(css.access_certification_link_appearing);
+            accessCertificationLink.classList.add(css.access_certification_link_hidden);
+        };
 
 
         return (
             <section className={css.section_certifications} ref={ref}>
                 <h1 className={css.title}>Certifications</h1>
-                <ul className={css.certifications_list} ref={certificationsList}>
+                <ul className={css.certifications_list} ref={certificationsCardsList}>
                     {
                         myCertifications.map(
-                            (certification) => {
-                                return(
-                                    <li 
-                                        className={css.certification_card} 
+                            (certification, index) => {
+                                return (
+                                    <li
+                                        className={css.certification_card}
                                         key={certification.name}
+                                        data-certification-id={index}
+                                        data-certification-img-path={certification.certificationIMG}
                                         style={
                                             {
                                                 backgroundImage: `
-                                                    linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.92),rgba(0, 0, 0, 1)), 
+                                                    linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.96),rgba(0, 0, 0, 1)), 
                                                     url(${certification.certificationIMG})
                                                 `,
                                             }
                                         }
-                                        onMouseOver={()=>{handleCertificationHover(certification.id)}}
-                                        id={certification.id}
+                                        onMouseEnter={
+                                            () => { handleCertificationCardEnter(index) }
+                                        }
+                                        onMouseLeave={
+                                            () => { handleCertificationCardLeave(index) }
+                                        }
                                     >
                                         <h2>{certification.name}</h2>
                                         <p>{certification.company}</p>
                                         <p>{certification.issueDate}</p>
-                                        <p>{certification.link}</p>
 
-                                        
-                                        <a 
-                                            href="" 
-                                            className={css.btn_view_certification} 
+                                        <div className={css.certification_access_menu_hidden}></div>
+
+                                        <a
+                                            href={certification.link}
+                                            className={css.access_certification_link_hidden}
                                         >
-                                            View Certification
+                                            Access Certification
                                         </a>
-                                        
+
                                     </li>
                                 )
                             }
