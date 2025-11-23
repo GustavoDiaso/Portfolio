@@ -1,5 +1,7 @@
 import awsCCPIMG from '../../../assets/certifications/awsCloudPractitioner.jpg';
-import ca from '../../../assets/certifications/crowdStrikeCertification.png';
+import crowdStrikeCertificationIMG from '../../../assets/certifications/crowdStrikeCertification.png';
+import gestaoSrumCertificationIMG from '../../../assets/certifications/gestaoScrum.png';
+import michiganEnglishTestIMG from '../../../assets/certifications/michiganEnglishTest.png';
 
 const myCertifications = [
     {
@@ -12,21 +14,21 @@ const myCertifications = [
     {
         name: 'Falcon 101: Falcon Platform Essentials',
         company: 'CrowdStrike',
-        certificationIMG: ca,
+        certificationIMG: crowdStrikeCertificationIMG,
         issueDate: 'OCT/2025',
         link: null,
     },
     {
         name: 'Gestão Ágil com Scrum',
         company: 'Udemy',
-        certificationIMG: null,
+        certificationIMG: gestaoSrumCertificationIMG,
         issueDate: 'AUG/2025',
         link: null,
     },
     {
         name: 'Michigan English Test',
         company: 'University of Michigan',
-        certificationIMG: null,
+        certificationIMG: michiganEnglishTestIMG,
         issueDate: 'JUN/2025',
         link: null,
     },

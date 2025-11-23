@@ -19,7 +19,7 @@ const Certifications = forwardRef(
             );
 
             const certificationAccessMenu = certificationCard.querySelector(
-                `.${css.certification_access_menu_hidden}`
+                `.${css.access_certification_menu_hidden}`
             );
 
             const accessCertificationLink = certificationCard.querySelector(
@@ -32,8 +32,8 @@ const Certifications = forwardRef(
                 url(${certificationCard.dataset.certificationImgPath})
             `;
 
-            certificationAccessMenu.classList.remove(css.certification_access_menu_hidden);
-            certificationAccessMenu.classList.add(css.certification_access_menu_appearing);
+            certificationAccessMenu.classList.remove(css.access_certification_menu_hidden);
+            certificationAccessMenu.classList.add(css.access_certification_menu_appearing);
             accessCertificationLink.classList.remove(css.access_certification_link_hidden);
             accessCertificationLink.classList.add(css.access_certification_link_appearing);
 
@@ -47,7 +47,7 @@ const Certifications = forwardRef(
             );
 
             const certificationAccessMenu = certificationCard.querySelector(
-                `.${css.certification_access_menu_appearing}`
+                `.${css.access_certification_menu_appearing}`
             );
 
             const accessCertificationLink = certificationCard.querySelector(
@@ -60,8 +60,8 @@ const Certifications = forwardRef(
                 url(${certificationCard.dataset.certificationImgPath})
             `;
 
-            certificationAccessMenu.classList.remove(css.certification_access_menu_appearing);
-            certificationAccessMenu.classList.add(css.certification_access_menu_hidden);
+            certificationAccessMenu.classList.remove(css.access_certification_menu_appearing);
+            certificationAccessMenu.classList.add(css.access_certification_menu_hidden);
             accessCertificationLink.classList.remove(css.access_certification_link_appearing);
             accessCertificationLink.classList.add(css.access_certification_link_hidden);
         };
@@ -99,7 +99,7 @@ const Certifications = forwardRef(
                                         <p>{certification.company}</p>
                                         <p>{certification.issueDate}</p>
 
-                                        <div className={css.certification_access_menu_hidden}></div>
+                                        <div className={css.access_certification_menu_hidden}></div>
 
                                         <a
                                             href={certification.link}
