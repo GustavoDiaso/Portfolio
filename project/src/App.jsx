@@ -10,7 +10,7 @@ const App = () => {
 		skills: useRef(null),
 		experiences: useRef(null),
 		certifications: useRef(null),
-		portfolio: useRef(null),
+		projects: useRef(null),
 		contact: useRef(null),
 	};
 
