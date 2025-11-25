@@ -18,11 +18,11 @@ const Certifications = forwardRef(
                 `[data-certification-id="${certificationId}"]`
             );
 
-            const certificationAccessMenu = certificationCard.querySelector(
-                `.${css.access_certification_menu_hidden}`
+            const certificationDonwloadMenu = certificationCard.querySelector(
+                `.${css.donwload_certification_menu_hidden}`
             );
 
-            const accessCertificationLink = certificationCard.querySelector(
+            const donwloadCertificationLink = certificationCard.querySelector(
                 `a`
             );
 
@@ -32,10 +32,10 @@ const Certifications = forwardRef(
                 url(${certificationCard.dataset.certificationImgPath})
             `;
 
-            certificationAccessMenu.classList.remove(css.access_certification_menu_hidden);
-            certificationAccessMenu.classList.add(css.access_certification_menu_appearing);
-            accessCertificationLink.classList.remove(css.access_certification_link_hidden);
-            accessCertificationLink.classList.add(css.access_certification_link_appearing);
+            certificationDonwloadMenu.classList.remove(css.donwload_certification_menu_hidden);
+            certificationDonwloadMenu.classList.add(css.donwload_certification_menu_appearing);
+            donwloadCertificationLink.classList.remove(css.donwload_certification_link_hidden);
+            donwloadCertificationLink.classList.add(css.donwload_certification_link_appearing);
 
         };
 
@@ -46,11 +46,11 @@ const Certifications = forwardRef(
                 `[data-certification-id="${certificationId}"]`
             );
 
-            const certificationAccessMenu = certificationCard.querySelector(
-                `.${css.access_certification_menu_appearing}`
+            const certificationDonwloadMenu = certificationCard.querySelector(
+                `.${css.donwload_certification_menu_appearing}`
             );
 
-            const accessCertificationLink = certificationCard.querySelector(
+            const donwloadCertificationLink = certificationCard.querySelector(
                 `a`
             );
 
@@ -60,10 +60,10 @@ const Certifications = forwardRef(
                 url(${certificationCard.dataset.certificationImgPath})
             `;
 
-            certificationAccessMenu.classList.remove(css.access_certification_menu_appearing);
-            certificationAccessMenu.classList.add(css.access_certification_menu_hidden);
-            accessCertificationLink.classList.remove(css.access_certification_link_appearing);
-            accessCertificationLink.classList.add(css.access_certification_link_hidden);
+            certificationDonwloadMenu.classList.remove(css.donwload_certification_menu_appearing);
+            certificationDonwloadMenu.classList.add(css.donwload_certification_menu_hidden);
+            donwloadCertificationLink.classList.remove(css.donwload_certification_link_appearing);
+            donwloadCertificationLink.classList.add(css.donwload_certification_link_hidden);
         };
 
 
@@ -99,13 +99,14 @@ const Certifications = forwardRef(
                                         <p>{certification.company}</p>
                                         <p>{certification.issueDate}</p>
 
-                                        <div className={css.access_certification_menu_hidden}></div>
+                                        <div className={css.donwload_certification_menu_hidden}></div>
 
                                         <a
-                                            href={certification.link}
-                                            className={css.access_certification_link_hidden}
+                                            href={certification.certificationIMG}
+                                            className={css.donwload_certification_link_hidden}
+                                            download={certification.name}
                                         >
-                                            Access Certification
+                                            Donwload Certification
                                         </a>
 
                                     </li>

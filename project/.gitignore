@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# tests
+project\test
+C:\Users\gholiveira\Documents\GitHub\Portfolio\project\test
