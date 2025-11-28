@@ -25,6 +25,8 @@ const Projects = forwardRef(
                                     })
                                     }
                                 </ul>
+                                <p>{project.description}</p>
+                                <a href={project.gitHubLink} target="_blank">Access on GitHub</a>
                             </li>
                         )
                     })

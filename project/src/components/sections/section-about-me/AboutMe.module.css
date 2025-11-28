@@ -15,19 +15,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 35px;
+    gap: 20px;
     max-width: 600px;
 }
 
 .title {
     margin: 0px;
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(242, 98, 255);
 }
 
 .text {
     margin: 0px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 350;
     color: rgb(230, 230, 230);
     text-align: center;
@@ -35,7 +35,7 @@
 }
 
 .dev_img {
-    height: 300px;
+    height: 280px;
 }
 
 @media screen and (max-width: 1069px) {

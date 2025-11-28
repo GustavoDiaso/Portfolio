@@ -13,7 +13,7 @@
 
 .title {
     margin: 0px;
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(242, 98, 255);
 }
 
@@ -24,6 +24,7 @@
     align-items: center;
     gap: 30px;
     padding: 0px;
+    margin: 0px;
     list-style: none;
 }
 
@@ -32,10 +33,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    width: 300px;
-    height: 300px;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+    width: 260px;
+    height: 260px;
+    border-radius: 25px 25px 0px 0px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,13 +46,15 @@
 
 .certification_card h2 {
     text-align: center;
-    padding: 10px;
+    padding: 0px 15px 0px 15px;
     margin: 0px 0px 10px 0px;
+    font-size: 20px;
 }
 
 .certification_card p {
     text-align: center;
     margin: 0px 0px 5px 0px;
+    font-size: 16px;
 }
 
 .donwload_certification_menu_appearing {
@@ -60,7 +62,7 @@
     height: 90px;
     background-color: #47008173;
     transition: 0.3s;
-    margin-top: 25px;
+    margin-top: 16px;
 }
 
 .donwload_certification_menu_hidden {

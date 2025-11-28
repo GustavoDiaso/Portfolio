@@ -34,7 +34,7 @@ const myCertifications = [
     },
     {
         name: 'Problem Solving (Basic)',
-        company: 'HackerRank Campus Club, AUFS',
+        company: 'HackerRank',
         certificationIMG: problemSolvingCertificateIMG,
         issueDate: 'MAR/2025',
     },

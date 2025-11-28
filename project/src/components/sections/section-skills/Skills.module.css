@@ -12,7 +12,7 @@
 
 .title {
     margin: 0px;
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(242, 98, 255);
 }
 
@@ -23,15 +23,15 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     list-style: none;
     margin: 0px;
     padding: 0px;
 }
 
 .skill {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 10px;
     background-color: #470081;
     display: flex;
@@ -51,6 +51,6 @@
 }
 
 .skill_img {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
 }
