@@ -1,6 +1,6 @@
 const projects = [
     {
-        name: 'Personal portfolio in React',
+        name: 'Personal portfolio in React 🧑',
         technologies: [
             'React', 
             'HTML 5', 
@@ -15,7 +15,7 @@ const projects = [
 
     },
     {
-        name: 'FinanceAPI',
+        name: 'FinanceAPI 💰',
         technologies: [
             'Python',
             'Flask',

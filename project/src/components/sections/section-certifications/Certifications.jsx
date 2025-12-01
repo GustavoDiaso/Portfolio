@@ -73,12 +73,12 @@ const Certifications = forwardRef(
                 <ul className={css.certifications_list} ref={certificationsCardsList}>
                     {
                         myCertifications.map(
-                            (certification, index) => {
+                            (certification, certification_index) => {
                                 return (
                                     <li
                                         className={css.certification_card}
-                                        key={certification.name}
-                                        data-certification-id={index}
+                                        key={`certification_${certification_index}`}
+                                        data-certification-id={certification_index}
                                         data-certification-img-path={certification.certificationIMG}
                                         style={
                                             {
@@ -89,10 +89,10 @@ const Certifications = forwardRef(
                                             }
                                         }
                                         onMouseEnter={
-                                            () => { handleCertificationCardEnter(index) }
+                                            () => { handleCertificationCardEnter(certification_index) }
                                         }
                                         onMouseLeave={
-                                            () => { handleCertificationCardLeave(index) }
+                                            () => { handleCertificationCardLeave(certification_index) }
                                         }
                                     >
                                         <h2>{certification.name}</h2>

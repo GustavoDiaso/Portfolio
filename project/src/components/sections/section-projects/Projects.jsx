@@ -9,18 +9,24 @@ const Projects = forwardRef(
     ) => {
         return(
             <section ref={ref} className={css.section_project}>
-                <h1 className={css.title}>Projects</h1>
+                <h1 className={css.title}>{"< Projects  />"}</h1>
                 <ul className={css.project_cards_list}>
                     {
-                    projects.map((project)=>{
+                    projects.map((project, project_index)=>{
                         return(
-                            <li className={css.project_card}>
+                            <li className={css.project_card} key={"project_card_" + project_index}>
                                 <h2>{project.name}</h2>
                                 <ul className={css.technologies_list}>
                                     {
-                                    project.technologies.map((t)=>{
+                                    project.technologies.map((technology, technology_index)=>{
                                         return(
-                                            <li>{t}</li>
+                                            <li 
+                                                key={
+                                                    "technology_" + technology_index + "_card_" + project_index 
+                                                }
+                                            >
+                                                {technology}
+                                            </li>
                                         )
                                     })
                                     }

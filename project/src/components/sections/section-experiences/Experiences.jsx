@@ -18,7 +18,6 @@ const Experiences = forwardRef(
                         educational_experiences.map((experience)=>{
                             return(
                                 <li key={experience.institution}>
-                                    <div className={css.arrow_indicator}></div>
                                     <div className={css.experience_information}>
                                         <h2>{experience.institution}</h2>
                                         <p>{experience.period}</p>
@@ -38,7 +37,6 @@ const Experiences = forwardRef(
                         professional_experiences.map((experience)=>{
                             return(
                                 <li key={experience.company+experience.period}>
-                                    <div className={css.arrow_indicator}></div>
                                     <div className={css.experience_information}>
                                         <h2>{experience.company}</h2>
                                         <p>{experience.period}</p>

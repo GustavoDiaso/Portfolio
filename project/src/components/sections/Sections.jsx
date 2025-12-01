@@ -5,6 +5,7 @@ import Skills from "./section-skills/Skills";
 import Experiences from "./section-experiences/Experiences";
 import Certifications from "./section-certifications/Certifications";
 import Projects from "./section-projects/Projects";
+import Contact from "./section-contact/Contact";
 
 /* 
     The Sections component receives an object which will hold references to all sections in our website
@@ -20,6 +21,7 @@ const Sections = ({ sectionReferences }) => {
             <Experiences ref={sectionReferences.experiences} />
             <Certifications ref={sectionReferences.certifications} />
             <Projects ref={sectionReferences.projects} />
+            <Contact ref={sectionReferences.contact} />
         </section>
     )
 }

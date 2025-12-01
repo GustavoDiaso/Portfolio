@@ -39,7 +39,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-bottom: 4px solid rgb(242, 98, 255);
+    border-bottom: 4px solid #470081;
     color: white;
     transition: border 0.3s;
 }
@@ -60,7 +60,7 @@
 .donwload_certification_menu_appearing {
     width: 100%;
     height: 90px;
-    background-color: #47008173;
+    background-color: #4700814f;
     transition: 0.3s;
     margin-top: 16px;
 }
@@ -68,7 +68,7 @@
 .donwload_certification_menu_hidden {
     width: 100%;
     height: 0px;
-    background-color: #47008173;
+    background-color: #4700814f;
     margin-top: 25px;
     transition: 0.3s;
 }

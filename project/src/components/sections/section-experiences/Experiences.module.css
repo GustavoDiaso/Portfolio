@@ -9,11 +9,12 @@
     gap: 40px;
     padding: 0px 20px 0px 20px;
 }
+
 .experiences{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     max-width: 500px;
 }
 
@@ -21,38 +22,36 @@
     margin: 0px;
     font-size: 35px;
     color: rgb(242, 98, 255);
+    text-align: center;
 }
 
 .experiences_list {
     list-style: none;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
-    margin: 0px 0px 0px 2px;
-    padding: 15px 0px 15px 40px;
-    border-left: 5px solid rgb(242, 98, 255);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .experiences_list li{
     border: 2px solid #470081;
+    background-color: #47008138;
     padding: 20px;
     color: rgb(230, 230, 230);
     width: 100%;
+    max-width: 450px;
     border-radius: 15px;
     display: flex;
     align-items: center;
 
 }
 
-.arrow_indicator{
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 15px solid #470081;
-    position: absolute;
-    transform: translatex(-35px);
-    
+.experiences_list li:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 40px 2px #ff0aff1c;
+    transition: transform 0.3s;
 }
 
 .experience_information {
