@@ -1,8 +1,23 @@
-// import linkedinImage from '../../../assets/images/contact-icons';
+import linkedinProfilePicture from '../../../assets/images/linkedinProfilePicture.jpg';
+import whatsappProfilePicture from '../../../assets/images/whatsappProfilePicture.png';
 
 export const contactOptions = [
-    { name: "Linkedin", href: 'https://www.linkedin.com/in/gustavodiaso', imgPath: null},
-    { name: 'GitHub', href: 'https://github.com/GustavoDiaso', imgPath: null },
-    { name: 'WhatsApp', href: 'https://wa.me/5511989155761', imgPath: null },
-    { name: 'Gmail', href: 'https://wa.me/5511989155761', imgPath: null },
+    { 
+        name: "LinkedIn",
+        contact: '@gustavodiaso',
+        href: 'https://www.linkedin.com/in/gustavodiaso',
+        imgPath: linkedinProfilePicture
+    },
+    { 
+        name: 'WhatsApp',
+        contact: '(11) 98915-5761',
+        href: 'https://wa.me/5511989155761',
+        imgPath: whatsappProfilePicture
+    },
+    { 
+        name: 'Gmail',
+        contact: 'gustavodias.olive@gmail.com',
+        href: 'https://wa.me/5511989155761',
+        imgPath: whatsappProfilePicture
+    },
 ];

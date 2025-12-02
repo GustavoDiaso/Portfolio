@@ -15,6 +15,7 @@
     margin: 0px;
     font-size: 35px;
     color: rgb(242, 98, 255);
+    text-shadow: 0px 0px 25px #fc00e3cc;
 }   
 
 .project_cards_list {
