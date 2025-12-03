@@ -27,7 +27,7 @@
     font-size: 35px;
     margin: 0px;
     width: 15ch;
-    height: 2.5ch;
+    min-height: 2.5ch;
 }
 
 .profession {
@@ -50,7 +50,8 @@
 }
 
 .dev_img {
-    height: 280px;
+    width: 100%;
+    max-width: 280px;
     transform: rotateY(180deg);
 }
 
@@ -105,5 +106,12 @@
 @media screen and (max-width: 1060px) {
     .section_home {
         gap: 50px;
+    }
+}
+
+@media screen and (max-width: 345px){
+    .name {
+        width: 100%;
+
     }
 }
