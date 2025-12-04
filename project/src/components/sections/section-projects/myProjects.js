@@ -27,7 +27,7 @@ const projects = [
             documentation, and optimization. It consolidates and simplifies data from external APIs
             (Frankfurter API and Brapi API) for fast delivery.
         `,
-        gitHubLink: 'https://github.com/GustavoDiaso/Portfolio',
+        gitHubLink: 'https://github.com/GustavoDiaso/FinanceAPI',
 
     },
   

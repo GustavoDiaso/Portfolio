@@ -41,7 +41,7 @@ const Contact = forwardRef(
                                     />
                                     <a href={contact.href} target="_blank">
                                         
-                                        <img src={contact.imgPath} alt="" className={css.contact_img}/>
+                                        <img src={contact.imgPath} className={css.contact_img}/>
                                         <div className={css.contact_card_info}>
                                             <p>{contact.name}</p>
                                             <p>{contact.contact}</p>

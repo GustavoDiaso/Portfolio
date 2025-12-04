@@ -11,6 +11,7 @@
 }
 
 .title {
+    z-index: 1;
     margin: 0px;
     font-size: 35px;
     color: rgb(242, 98, 255);
@@ -19,6 +20,7 @@
 }
 
 .skills {
+    z-index: 1;
     width: 100%;
     max-width: 700px;
     display: flex;
@@ -34,7 +36,7 @@
 .skill {
     width: 110px;
     height: 110px;
-    border-radius: 10px;
+    border-radius: 20px 0px 20px 0px;
     background-color: #47008138;
     border: 2px solid #470081;
     display: flex;

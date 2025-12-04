@@ -1,13 +1,13 @@
-import css from "./Skills.module.css"
-import pythonIMGPath from "../../../assets/images/python.png"
-import flaskIMGPath from "../../../assets/images/flask.png"
-import reactIMGPath from "../../../assets/images/react.png"
-import javaScriptIMGPath from "../../../assets/images/js.png"
-import htmlIMGPath from "../../../assets/images/html.png"
-import cssIMGPath from "../../../assets/images/css.png"
-import gitHubIMGPath from "../../../assets/images/github.png"
-import mySqlIMGPath from "../../../assets/images/mysql.png"
-import { forwardRef } from "react"
+import css from "./Skills.module.css";
+import pythonIMGPath from "../../../assets/images/python.png";
+import flaskIMGPath from "../../../assets/images/flask.png";
+import reactIMGPath from "../../../assets/images/react.png";
+import javaScriptIMGPath from "../../../assets/images/js.png";
+import htmlIMGPath from "../../../assets/images/html.png";
+import cssIMGPath from "../../../assets/images/css.png";
+import gitHubIMGPath from "../../../assets/images/github.png";
+import mySqlIMGPath from "../../../assets/images/mysql.png";
+import { forwardRef } from "react";
 
 const skills = [
     {name: 'Python', imgSource: pythonIMGPath},
