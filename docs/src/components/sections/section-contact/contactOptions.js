@@ -2,22 +2,22 @@ import linkedinProfilePicture from '../../../assets/images/linkedinProfilePictur
 import whatsappProfilePicture from '../../../assets/images/whatsappProfilePicture.png';
 
 export const contactOptions = [
-    { 
+    {
         name: "LinkedIn",
         contact: '@gustavodiaso',
         href: 'https://www.linkedin.com/in/gustavodiaso',
         imgPath: linkedinProfilePicture
     },
-    { 
+    {
         name: 'WhatsApp',
         contact: '(11) 98915-5761',
         href: 'https://wa.me/5511989155761',
         imgPath: whatsappProfilePicture
     },
-    { 
+    {
         name: 'Gmail',
         contact: 'gustavodias.olive@gmail.com',
-        href: 'https://wa.me/5511989155761',
+        href: 'https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqZhvHfdJqRqTxTGcRnDZFGZbPPGNpdKppRplzBLKJxrFpBcGZXFjfzPtrHrCSPNVmzhGq',
         imgPath: whatsappProfilePicture
     },
 ];

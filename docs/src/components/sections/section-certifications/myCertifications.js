@@ -1,6 +1,6 @@
 import awsCCPIMG from '../../../assets/certifications/awsCloudPractitioner.jpg';
 import crowdStrikeCertificationIMG from '../../../assets/certifications/crowdStrikeCertification.png';
-import gestaoSrumCertificationIMG from '../../../assets/certifications/gestaoScrum.png';
+import scrumCertificationIMG from '../../../assets/certifications/gestaoScrum.png';
 import michiganEnglishTestIMG from '../../../assets/certifications/michiganEnglishTest.png';
 import problemSolvingCertificateIMG from '../../../assets/certifications/problemSolvingCertificate.png';
 import scientificComputingIMG from '../../../assets/certifications/scientificComputing.jpg';
@@ -21,9 +21,9 @@ const myCertifications = [
         issueDate: 'OCT/2025',
     },
     {
-        name: 'Gestão Ágil com Scrum',
+        name: 'Agile Management with Scrum',
         company: 'Udemy',
-        certificationIMG: gestaoSrumCertificationIMG,
+        certificationIMG: scrumCertificationIMG,
         issueDate: 'AUG/2025',
     },
     {
