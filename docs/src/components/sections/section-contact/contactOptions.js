@@ -17,7 +17,7 @@ export const contactOptions = [
     {
         name: 'Gmail',
         contact: 'gustavodias.olive@gmail.com',
-        href: 'https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqZhvHfdJqRqTxTGcRnDZFGZbPPGNpdKppRplzBLKJxrFpBcGZXFjfzPtrHrCSPNVmzhGq',
+        href: 'mailto:gustavodias.olive@gmail.com',
         imgPath: whatsappProfilePicture
     },
 ];
