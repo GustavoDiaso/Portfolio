@@ -1,5 +1,6 @@
 import css from "./Header.module.css";
 import logoIMGPath from "../../assets/images/logo.png";
+import navButtomIMG from "../../assets/images/menu.png";
 import { useState, useEffect, useRef } from "react";
 
 
@@ -60,14 +61,14 @@ const Header = (
                     />
                 </a>
 
-                <nav>
+                <nav className={css.horizontal_navbar}>
                     <div className={css.slide} ref={slideRef}></div>
-                    <ul className={css.menu_options} ref={ulRef}>
+                    <ul className={css.horizontal_navbar_link_list} ref={ulRef}>
                         {
                             navBarLinks.map((link) => {
                                 return (
                                     <li
-                                        key={link.text}
+                                        key={`h_${link.text}`}
                                         className={link.text == activeLinkText ? css.nav_link_active : css.nav_link}
                                         data-status={link.text == activeLinkText ? 'active' : ''}
                                     >
@@ -87,6 +88,33 @@ const Header = (
                         }
                     </ul>
                 </nav>
+
+                <button className={css.btn_show_vertical_nav}>
+                    <img src={navButtomIMG} alt="" />
+                </button>
+
+                <nav className={css.vertical_navbar}>
+                    <ul className={css.vertical_navbar_link_list}>
+                        {
+                            navBarLinks.map((link) => {
+                                return (
+                                    <li key={`v_${link.text}`}>
+                                        <a
+                                            onClick={
+                                                () => {
+                                                    scrollToSection(link.sectionOfReference);
+                                                }
+                                            }
+                                        >
+                                            {link.text}
+                                        </a>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </nav>
+
             </div>
         </header>
     )
