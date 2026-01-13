@@ -109,9 +109,13 @@
     }
 }
 
-@media screen and (max-width: 345px){
+@media screen and (max-width: 460px){
     .name {
         width: 100%;
-
+        /* padding-right: 25px; */
+    }
+    .dev_info {
+        padding: 0px 50px;
+        width: 100%;
     }
 }
