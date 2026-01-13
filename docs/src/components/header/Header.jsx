@@ -25,20 +25,20 @@ const Header = (
 
     //this function shows the vertical navbar on the screen whenever the openVerticalNavBtn is called
     const showVerticalNavbar = () => {
-        if (!verticalNavbarRef.current) {return}
+        if (!verticalNavbarRef.current) { return }
 
         const verticalNavbar = verticalNavbarRef.current;
         verticalNavbar.style.transform = `translateX(-${verticalNavbar.offsetWidth}px)`;
-        
+
     }
 
     //this function hides the vertical navbar on the screen whenever the openVerticalNavBtn is called
     const hideVerticalNavbar = () => {
-        if (!verticalNavbarRef.current) {return}
+        if (!verticalNavbarRef.current) { return }
 
         const verticalNavbar = verticalNavbarRef.current;
-        verticalNavbar.style.transform = `translateX(100vw)`;
-        
+        verticalNavbar.style.transform = `translateX(+${verticalNavbar.offsetWidth}px)`;
+
     }
 
     // this function will be called every time the component is mounted or whenever activeLink suffers any changes
@@ -110,7 +110,7 @@ const Header = (
 
                 <nav className={css.vertical_navbar} ref={verticalNavbarRef}>
 
-                    <button 
+                    <button
                         className={css.btn_close_vertical_nav}
                         onClick={hideVerticalNavbar}
                     >
@@ -138,8 +138,8 @@ const Header = (
                     </ul>
                 </nav>
 
-                <button 
-                    className={css.btn_show_vertical_nav} 
+                <button
+                    className={css.btn_show_vertical_nav}
                     onClick={showVerticalNavbar}
                 >
                     <img src={openVerticalNavBtnIMG} alt="" />

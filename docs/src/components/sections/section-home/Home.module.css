@@ -12,11 +12,13 @@
 
 .dev_info {
     width: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 
 .presentation {
     color: rgb(230, 230, 230);
-    margin-top: 30px;
+    margin-top: 25px;
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -61,7 +63,7 @@
     gap: 20px;
     padding: 0px;
     list-style: none;
-    margin-top: 35px;
+    margin: 0px;
 
 }
 
@@ -109,12 +111,19 @@
     }
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 460px) {
+
+    .dev_info {
+        align-items: center;
+        padding: 0px 10px;
+    }
+
     .name {
         width: 100%;
+        text-align: center;
     }
-    .dev_info {
-        padding: 0px 20px;
-        width: 100%;
+
+    .profession {
+        text-align: center;
     }
 }
