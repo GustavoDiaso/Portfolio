@@ -1,6 +1,7 @@
 import css from "./Header.module.css";
 import logoIMGPath from "../../assets/images/logo.png";
-import navButtomIMG from "../../assets/images/menu.png";
+import openVerticalNavBtnIMG from "../../assets/images/menu.png";
+import closeVerticalNavBtnIMG from "../../assets/images/close.png";
 import { useState, useEffect, useRef } from "react";
 
 
@@ -10,6 +11,7 @@ const Header = (
     const [activeLinkText, setActiveLinkText] = useState('Home');
     const ulRef = useRef(null); // Reference to the <ul></ul> element that contains the navbar links  
     const slideRef = useRef(null); // Reference to the <div></div> element that represents the slide 
+    const verticalNavbarRef = useRef(null); //References the vertical navbar element
 
     const navBarLinks = [
         { text: "Home", sectionOfReference: 'home' },
@@ -20,6 +22,24 @@ const Header = (
         { text: "Projects", sectionOfReference: 'projects' },
         { text: "Contact", sectionOfReference: 'contact' },
     ];
+
+    //this function shows the vertical navbar on the screen whenever the openVerticalNavBtn is called
+    const showVerticalNavbar = () => {
+        if (!verticalNavbarRef.current) {return}
+
+        const verticalNavbar = verticalNavbarRef.current;
+        verticalNavbar.style.transform = `translateX(-${verticalNavbar.offsetWidth}px)`;
+        
+    }
+
+    //this function hides the vertical navbar on the screen whenever the openVerticalNavBtn is called
+    const hideVerticalNavbar = () => {
+        if (!verticalNavbarRef.current) {return}
+
+        const verticalNavbar = verticalNavbarRef.current;
+        verticalNavbar.style.transform = `translateX(100vw)`;
+        
+    }
 
     // this function will be called every time the component is mounted or whenever activeLink suffers any changes
     useEffect(
@@ -42,10 +62,9 @@ const Header = (
         [activeLinkText]
     );
 
-
-
     return (
         <header className={css.header}>
+
             <div className={css.header_content}>
                 <a href={navBarLinks[0].href}>
                     <img
@@ -89,11 +108,15 @@ const Header = (
                     </ul>
                 </nav>
 
-                <button className={css.btn_show_vertical_nav}>
-                    <img src={navButtomIMG} alt="" />
-                </button>
+                <nav className={css.vertical_navbar} ref={verticalNavbarRef}>
 
-                <nav className={css.vertical_navbar}>
+                    <button 
+                        className={css.btn_close_vertical_nav}
+                        onClick={hideVerticalNavbar}
+                    >
+                        <img src={closeVerticalNavBtnIMG} alt="" />
+                    </button>
+
                     <ul className={css.vertical_navbar_link_list}>
                         {
                             navBarLinks.map((link) => {
@@ -114,6 +137,14 @@ const Header = (
                         }
                     </ul>
                 </nav>
+
+                <button 
+                    className={css.btn_show_vertical_nav} 
+                    onClick={showVerticalNavbar}
+                >
+                    <img src={openVerticalNavBtnIMG} alt="" />
+                </button>
+
 
             </div>
         </header>
